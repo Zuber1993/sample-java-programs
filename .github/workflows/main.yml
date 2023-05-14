@@ -6,11 +6,21 @@ jobs:
     steps:
       - name: download code
         uses: actions/checkout@v3
+
+  java:
+    runs-on: ubuntu-latest
+    steps:
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
            distribution: oracle
            java-version: 17
 
+  Build:
+    runs-on: ubuntu-latest
+    steps:
       - name: Build project
         run: mvn clean install
+      #- name: check artifact folder
+      #  run: 
+          
