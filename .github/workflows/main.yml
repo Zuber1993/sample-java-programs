@@ -21,8 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build project
-        run: mvn clean install && pwd
-  
+        run: mvn clean install && cd threadleak && pwd
   Image:
     runs-on: ubuntu-latest
     steps:
