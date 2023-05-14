@@ -25,5 +25,5 @@ jobs:
       - name: check artifact folder
         run:  |
          ls -l
-         ls -l allocations
+         ls -l allocations/target
           
