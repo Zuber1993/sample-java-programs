@@ -21,11 +21,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build project
-        run: mvn clean install && cd threadleak && pwd
-  Image:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Build Image
-        run: docker build -t java:latest . 
+        run: mvn clean install 
+      - run: cp -r /threadleak/target/threadleak.jar . && ls -l
+  #Image:
+   # runs-on: ubuntu-latest
+    #steps:
+     # - uses: actions/checkout@v3
+      #- name: Build Image
+       # run: docker build -t java:latest . 
           
