@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build project
-        run: mvn clean install
+        run: mvn clean install && pwd
   
   Image:
     runs-on: ubuntu-latest
