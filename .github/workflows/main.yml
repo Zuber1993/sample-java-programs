@@ -23,6 +23,6 @@ jobs:
       - name: Build project
         run: mvn clean install
       - name: check artifact folder
-      - run: |
-         ls -l 
+        run:  |
+         ls -l
           
