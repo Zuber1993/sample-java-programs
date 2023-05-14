@@ -24,6 +24,7 @@ jobs:
         run: mvn clean install 
       - run: cp -r threadleak/target/threadleak.jar . && ls -l
   Image:
+    needs: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
